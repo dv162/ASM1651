@@ -1,4 +1,4 @@
-﻿using ASM1651;
+using ASM1651;
 using System;
 using System.Drawing;
 
@@ -11,6 +11,7 @@ internal class Program
 
     static void Main(string[] args)
     {
+        ILogin login;
         do
         {
             EmployeeManager.Title();
@@ -31,6 +32,7 @@ internal class Program
                         case 1:
                             do
                             {
+                                login = new Company();
                                 //Login Company
                                 Console.ForegroundColor = ConsoleColor.Cyan;
                                 Console.WriteLine("Company Login");
@@ -269,6 +271,7 @@ internal class Program
                         case 2:
                             do
                             {
+                                login = new Employee();
                                 //Login Employee
                                 Console.ForegroundColor = ConsoleColor.Cyan;
                                 Console.WriteLine("Employee Login");
